@@ -80,7 +80,7 @@ public class Employee implements Serializable {
     public String getEmployeeCode() {
         return employeeCode;
     }
-    public void setEmployeeCode() {
+    public void setEmployeeCode(String s) {
         this.employeeCode = employeeCode;
     }
 
