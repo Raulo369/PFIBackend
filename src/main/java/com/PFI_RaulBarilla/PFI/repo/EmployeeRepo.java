@@ -1,4 +1,7 @@
 package com.PFI_RaulBarilla.PFI.repo;
 
-public interface EmployeeRepo {
+import com.PFI_RaulBarilla.PFI.model.Employee;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface EmployeeRepo extends JpaRepository<Employee, Long> {
 }
