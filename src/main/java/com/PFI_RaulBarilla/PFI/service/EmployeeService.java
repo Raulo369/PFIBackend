@@ -15,6 +15,7 @@ public class EmployeeService {
 
     @Autowired
     public EmployeeService(EmployeeRepo  employeeRepo) {
+
         this.employeeRepo = employeeRepo;
     }
 
@@ -24,19 +25,22 @@ public class EmployeeService {
     }
 
     public List<Employee> findAllEmployees(){
+
         return employeeRepo.findAll();
     }
 
     public Employee updateEmployee(Employee employee){
+
         return employeeRepo.save(employee);
     }
 
     public Employee findEmployeeById(Long id) {
-        return employeeRepo.findEmployeeById(id)
-                .orElseThrow(() -> new UserNotFoundException("User by id" + id + "was not found"));
+        return employeeRepo.findEMployeeById(id)
+                .orELseThrow(() -> new UserNotFoundException("User by id" + id +"was not found"));
     }
 
     public void deleteEmployee(Long id) {
+
         employeeRepo.deleteEmployeeById(id);
     }
 }
